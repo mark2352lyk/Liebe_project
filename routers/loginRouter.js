@@ -28,7 +28,7 @@ router.get("/", (req,res,next) => {
 router.post("/check", (req,res,next) => {
     const check_login_query = `
     SELECT  email,
-    password
+            password
     FROM  login
     WHERE  email = "${req.body.email}"
     AND  password = "${req.body.password}"
@@ -59,6 +59,7 @@ router.post("/join/check", (req,res,next) => {
     `;
     db.query(email_check_query, (error, result) => {
         if (error) {
+            console.log(error);
             return res.status(403).send("애러 발생!");
         } else {
             if (result.length > 0) {
