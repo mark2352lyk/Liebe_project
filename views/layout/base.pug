@@ -6,15 +6,19 @@ html(lang="en")
         meta(name="viewport", content="width=`, initial-scale=1.0")
         title Document
         link(rel="stylesheet", href="/assets/css/styles.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
     body 
         .header1 
             .logo
                 a(href="/") Liebe 
-            .search
-            .basket
-            .event
-            .recommendation
-            .brand
+            .search search
+                input.search__Search(type="text" placeholder="상품을 검색해보세요")
+                a(href="#")
+                    i.fas.fa-search
+            .basket basket
+            .event event
+            .recommendation recommendation
+            .brand brand
             .login
                 a(href="/login") Log In
                 p |
