@@ -7,7 +7,7 @@ const loginRouter = require("./routers/loginRouter");
 dotenv.config();
 
 const app = express();
-const PORT = 5000;
+const PORT = 8000;
 
 app.set("view engine", "pug");
 app.use(morgan(`dev`));
