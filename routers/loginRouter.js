@@ -51,11 +51,13 @@ router.get("/join", (req,res,next) => {
     res.render("screens/join");
 });
 
-router.post("/join/check", (req,res,next) => {
+router.post("/join/check", (req,res,next) => {  
+    const email = req.body.frontEmail + req.body.behindEmail;
+    const name = req.body.firstName + req.body.lastName;
     const email_check_query = `
     SELECT  email
       FROM  login
-     WHERE  email = "${req.body.email}";
+     WHERE  email = "${email}";
     `;
     db.query(email_check_query, (error, result) => {
         if (error) {
@@ -65,16 +67,19 @@ router.post("/join/check", (req,res,next) => {
             if (result.length > 0) {
                 return res.status(403).send("이미 가입된 이메일이 존재합니다");
             } else {
+                console.log(req.body.gender);
                 const check_join_query = `
                 INSERT INTO login (
                     email,
                     password,
                     name,
+                    gender,
                     phoneNumber
                 ) VALUES (
-                    "${req.body.email}",
+                    "${email}",
                     "${req.body.password}",
-                    "${req.body.name}",
+                    "${name}",
+                    "${req.body.gender}",
                     "${req.body.phoneNumber}"
                 );
             `;
