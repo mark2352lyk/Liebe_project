@@ -7,32 +7,42 @@ html(lang="en")
         title Document
         link(rel="stylesheet", href="/assets/css/styles.css")
     body 
-        form(action="/login/join/check", method="POST")
+        form.joinForm(action="/login/join/check", method="POST")
+            section.rsWrapper
+                .rsWrapper__box1 이용약관동의어쩌고
+                .rsWrapper__box2
+                    input(type="checkBox")
+                    samp 동의하시겠습니까?
+                .rsWrapper__box3 개인정보제공동의서어쩌구
+                .rsWrapper__box4
+                    input(type="checkBox")
+                    samp 동의하시겠습니까?
+
             div.info
                 div.name
-                    div.firstName 
-                        input(type="name" name="firstName" id="FisrtName" placeholder="성" required)
-                    div.lastName
-                        input(type="name" name="lastName" id="lastName" placeholder="이름" required)
+                    input.join__firstName(type="name" name="firstName"  placeholder="성" required)
+                    input.join__lastName(type="name" name="lastName" placeholder="이름" required)
+
                 div.gender
                     select(name="gender")
+                        option(value="false") -성별 선택-
                         option(value="남성") 남성 
                         option(value="여성") 여성  
+
                 div.email    
                     div.frontEmail
-                        label(htmlFor="frontEmail")   
-                        input(type="text" name="frontEmail" id="frontEmail" placeholder="이메일" required)
+                        input(type="text" name="frontEmail" id="signup_frontEmail" placeholder="이메일" required)
+
                     div.behindEmail 
                         select(name="behindEmail")
                             option(value="@gmail.com") @gmail.com
                             option(value="@naver.com") @naver.com
                             option(value="@nate.com") @nate.com
                             option(value="@hanmail.net") @hanmail.net
+
                 div.password
-                    label(htmlFor="password")
-                    input(type="password" name="password" id="password" placeholder="비밀번호" required)
+                    input(type="password" name="password" id="signup_password" placeholder="비밀번호" required)
                 div.phonenum
-                    label(htmlFor="phonenum")
-                    input(type="text" name="phoneNumber" id="phoneNumber" placeholder="XXX-XXXX-XXXX")
+                    input(type="text" name="phoneNumber" id="signup_phoneNumber" placeholder="XXX-XXXX-XXXX")
 
                 input(type="submit" value="회원가입")
