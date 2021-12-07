@@ -11,11 +11,11 @@ html(lang="en")
             section.rsWrapper
                 .rsWrapper__box1 이용약관동의어쩌고
                 .rsWrapper__box2
-                    input(type="checkBox")
+                    input(type="checkBox" required)
                     samp 동의하시겠습니까?
                 .rsWrapper__box3 개인정보제공동의서어쩌구
                 .rsWrapper__box4
-                    input(type="checkBox")
+                    input(type="checkBox" required)
                     samp 동의하시겠습니까?
 
             div.info
@@ -43,6 +43,6 @@ html(lang="en")
                 div.password
                     input(type="password" name="password" id="signup_password" placeholder="비밀번호" required)
                 div.phonenum
-                    input(type="text" name="phoneNumber" id="signup_phoneNumber" placeholder="XXX-XXXX-XXXX")
+                    input(type="tel" name="phoneNumber" id="signup_phoneNumber" placeholder="XXX-XXXX-XXXX")
 
                 input(type="submit" value="회원가입")
