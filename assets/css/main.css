@@ -1,0 +1,31 @@
+
+.bg {
+    width: 100%;
+    height: 850px;
+  
+    background-image: url(https://i.pinimg.com/originals/3c/23/79/3c23799d693841c944a8b6f403b00a88.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .bg1 {
+    width: 80%;
+    height: 750px;
+  
+    background-image: url(https://www.creativehuts.com/wp-content/uploads/2020/06/the-ultimate-guide-of-fashion-photography-2020.jpg);
+    background-size: cover;
+  
+    box-shadow: 40px 30px 1px rgb(255, 243, 178) ;
+  }
+
+.keyword {
+    width: 100%;
+    height: 800px;
+    background-color: tomato;
+}
