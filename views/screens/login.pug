@@ -7,12 +7,33 @@ html(lang="en")
         title Document
         link(rel="stylesheet", href="/assets/css/styles.css")
     body 
-        form(action="/login/check", method="POST") 
-            div
-                input(type="email" name="email" id="signin_email" placeholder="이메일" required)
-            div
-                input(type="password" name="password" id="email" placeholder="비밀번호" required)
+        .bg2
+            .bg3
+                .login_box
+                    .login_txt1
+                    .login_txt2
+                        .title
+                            p Login
+                        .sub
+                            form(action="/login/check", method="POST") 
+                                div.id
+                                    input(type="email" class="email" name="email" id="signin_email" placeholder="Email" required)
+                                div.pw
+                                    input(type="password" class="password" name="password" id="email" placeholder="Password" required)
+                                input(type="submit" value="login" class="btn")
+                            
 
-            input(type="submit" value="로그인")
+                            a(href="/login/join") sign up
 
-        a(href="/login/join") 회원가입
+                    .login_back
+                        p "Welcome to Liebe"
+                        p Liebe에서 가장 마음에드는 옷을 골라주세요. 
+                        brp   Pick your favorite clothes from Liebe.
+                        p  Liebe는 당신이 원하는 코디를 추천해드립니다!
+                        brp Liebe will recommend the outfit you want!
+                        p 항상 좋은평가를 해주셔서 감사합니다.
+                        brp Thank you for always giving us good reviews.
+                        p 언제나 여러분에게 도움이되는 Liebe가 되겠습니다.
+                        brp We will always be a Liebe to help you.
+
+                        a(href="/") Liebe
