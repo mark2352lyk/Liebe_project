@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const globalRouter = require("./routers/globalRouter");
 const loginRouter = require("./routers/loginRouter");
 const codyRouter = require("./routers/codyRouter");
+const inquireRouter = require("./routers/inquireRouter");
 dotenv.config();
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use("/", globalRouter);
 app.use("/login", loginRouter);
 app.use("/cody", codyRouter);
+app.use("/inquire", inquireRouter);
 
 app.listen(PORT, () => {
     console.log(`${PORT} SERVER START!`);

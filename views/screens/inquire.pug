@@ -1,0 +1,14 @@
+extends ../layout/base.pug
+
+block content
+    main.mainInquire
+        form(action="/inquire/check" method="POST")
+            div
+                input(type="text" name="content" id="content" placeholder="내용")
+            input(type="submit" value="작성하기")
+        div 문의 내역
+        each inquire in inquireList
+            div.List
+                h1 #{inquire.content}
+                h1 #{inquire.createdAt}
+        
